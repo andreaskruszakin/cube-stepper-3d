@@ -1,0 +1,33 @@
+
+!.env.example
+# builds and caches
+# dependencies
+# machine noise
+# python
+# secrets. Never commit these; put a .env.example beside them instead.
+*.key
+*.pem
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+.next
+.pnp
+.pnp.*
+.pnpm-debug.log*
+.turbo
+.venv
+.vercel
+__pycache__
+build
+coverage
+dist
+dist/
+next-env.d.ts
+node_modules
+node_modules/
+npm-debug.log*
+out
+out/
+yarn-debug.log*
+yarn-error.log*

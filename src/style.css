@@ -1,0 +1,87 @@
+:root {
+  --paper: #fdfdfd;
+  --ink: #1a1a1a;
+  /* Cube edge in CSS px, written by main.ts on resize so the DOM hit areas sit on the cubes. */
+  --s: 120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Geist Variable", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stepper {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cube-hit {
+  position: absolute;
+  left: 50%;
+  width: calc(var(--s) * 1.08);
+  height: calc(var(--s) * 1.08);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: none;
+  transform: translate(-50%, -50%);
+}
+
+.cube-hit[data-dir="up"] {
+  top: calc(50% - var(--s));
+}
+
+.cube-hit[data-dir="down"] {
+  top: calc(50% + var(--s));
+}
+
+.cube-hit:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 6px;
+}
+
+.value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--s) * 3);
+  height: calc(var(--s) * 0.7);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  font-size: calc(var(--s) * 0.48);
+  font-weight: 450;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.value span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}

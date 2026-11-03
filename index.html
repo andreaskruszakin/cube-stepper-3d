@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cube stepper</title>
+  </head>
+  <body>
+    <canvas id="stage" aria-hidden="true"></canvas>
+    <main class="stepper">
+      <button class="cube-hit" data-dir="up" aria-label="Increase"></button>
+      <output class="value" aria-live="polite"><span>0</span></output>
+      <button class="cube-hit" data-dir="down" aria-label="Decrease"></button>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
