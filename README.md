@@ -54,4 +54,4 @@ node scripts/render-checks.mjs    # pixel checks
 pnpm build
 ```
 
-Made by [Andreas Kruszakin](https://andreas.vision). More experiments on [X](https://x.com/andreaskruszaki).
+Made by [Andreas Kruszakin](https://andreas.vision), design engineer. More experiments at [andreas.vision/play](https://andreas.vision/play) and on [X](https://x.com/andreaskruszaki).
